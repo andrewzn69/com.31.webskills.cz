@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import { Button } from '@/components/ui/button';
-import Masthead from '@/components/ui/masthead';
+import Masthead from '@/components/masthead';
+import AboutUs from '@/components/aboutus';
 import styles from './Home.module.css';
 import Head from 'next/head';
 
@@ -12,6 +12,7 @@ export default function Home() {
 			</Head>
 
 			<Masthead />
+			<AboutUs />
 		</div>
 	);
 }
