@@ -1,7 +1,10 @@
+'use client';
+
 import { ReactNode } from 'react';
 import { redirect } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 
+// TODO: implement authentication logic
 const isAuthenticated = () => {
 	return true;
 };
@@ -12,6 +15,7 @@ export default function DashboardLayout({ children }: { children: ReactNode }) {
 	}
 
 	const handleLogout = () => {
+		// TODO: implement logout logic
 		console.log('User logged out');
 		window.location.href = '/';
 	};
