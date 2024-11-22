@@ -21,7 +21,7 @@ const Masthead: React.FC = () => {
 				const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
 				const minutes = Math.floor((difference / 1000 / 60) % 60);
 				const seconds = Math.floor((difference / 1000) % 60);
-				setCountdown(`${days}d ${hours}h ${minutes}m ${seconds}s`);
+				setCountdown(`${days} days ${hours} hours ${minutes} minutes ${seconds} seconds`);
 			} else {
 				setCountdown('Released!');
 			}
@@ -40,7 +40,12 @@ const Masthead: React.FC = () => {
 		progress = Math.min(1, scrollY / elContainer.clientHeight);
 	}
 
-	const currentDate = new Date().toLocaleString();
+	const dateObj = new Date();
+	const dayOfWeek = dateObj.toLocaleDateString('en-US', { weekday: 'long' });
+	const day = dateObj.getDate();
+	const month = dateObj.toLocaleDateString('en-US', { month: 'long' });
+	const year = dateObj.getFullYear();
+	const currentDate = `It's ${dayOfWeek}, ${day}. ${month} ${year}`;
 
 	return (
 		<div
@@ -65,7 +70,7 @@ const Masthead: React.FC = () => {
 				</h2>
 			</div>
 			<div className='font-bold text-white drop-shadow-[0_5px_3px_rgba(0,0,0,0.4)] text-center flex-1 md:pb-10 transition-all duration-1000 relative'>
-				<p className='mt-1 text-lg'>Today is {currentDate}</p>
+				<p className='mt-1 text-lg'>{currentDate}</p>
 				<p className='mt-3 text-2xl xl:text-3xl'>Game release in: {countdown}</p>
 			</div>
 			<div className='flex-grow-0 pb-20 md:pb-10 transition-all duration-1000 relative'>
