@@ -1,4 +1,5 @@
 import React from 'react';
+import Member from '@/components/member';
 
 const AboutUs = () => {
 	return (
@@ -12,13 +13,13 @@ const AboutUs = () => {
 			<div className='container mx-auto px-11 text-center mt-28'>
 				<h2>Our Team</h2>
 				<div className='my-2'>the "heart of the company"</div>
-				<div className='mt-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 '>
-					<div>member</div>
-					<div>member</div>
-					<div>member</div>
-					<div>member</div>
-					<div>member</div>
-					<div>member</div>
+				<div className='mt-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 lg:gap-20'>
+					<Member id='1' name='Luke' socialId='@luke' link='#' />
+					<Member id='1' name='Mark' socialId='@mark' link='#' />
+					<Member id='1' name='James' socialId='@james' link='#' />
+					<Member id='1' name='John' socialId='@johnpork' link='#' />
+					<Member id='1' name='Andrew' socialId='@andrew' link='#' />
+					<Member id='1' name='Thomas' socialId='@thomas' link='#' />
 				</div>
 			</div>
 		</section>
