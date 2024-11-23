@@ -1,5 +1,7 @@
 import React from 'react';
 import Member from '@/components/member';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 const AboutUs = () => {
 	return (
@@ -9,6 +11,11 @@ const AboutUs = () => {
 					<strong>We are passionate team of innovators, artists, and storytellers. </strong>
 					Our team is dedicated to craft immersive gaming experiences that inspire and entertain.
 				</p>
+			</div>
+			<div className={`absolute top-9 right-10 transition-opacity duration-1000 `}>
+				<Button asChild className='bg-white text-black hover:bg-gray-200'>
+					<Link href='/login'>Login</Link>
+				</Button>
 			</div>
 			<div className='container mx-auto px-11 text-center mt-28'>
 				<h2>Our Team</h2>
