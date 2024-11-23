@@ -21,7 +21,7 @@ const Masthead: React.FC = () => {
 				const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
 				const minutes = Math.floor((difference / 1000 / 60) % 60);
 				const seconds = Math.floor((difference / 1000) % 60);
-				setCountdown(`${days} days ${hours} hours ${minutes} minutes ${seconds} seconds`);
+				setCountdown(`${days} dní ${hours} hodin ${minutes} minut ${seconds} sekund`);
 			} else {
 				setCountdown('Released!');
 			}
@@ -41,11 +41,11 @@ const Masthead: React.FC = () => {
 	}
 
 	const dateObj = new Date();
-	const dayOfWeek = dateObj.toLocaleDateString('en-US', { weekday: 'long' });
+	const dayOfWeek = dateObj.toLocaleDateString('cs-CZ', { weekday: 'long' });
 	const day = dateObj.getDate();
-	const month = dateObj.toLocaleDateString('en-US', { month: 'long' });
+	const month = dateObj.toLocaleDateString('cs-CZ', { month: 'long' });
 	const year = dateObj.getFullYear();
-	const currentDate = `It's ${dayOfWeek}, ${day}. ${month} ${year}`;
+	const currentDate = `Je ${dayOfWeek}, ${day}. ${month} ${year}`;
 
 	return (
 		<div
