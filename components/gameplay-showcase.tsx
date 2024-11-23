@@ -9,7 +9,7 @@ const GameplayShowcase = () => {
 					Gameplay Showcase ze hry Throne of Ashes
 				</h2>
 				<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-					{[1, 2].map((i) => (
+					{[1, 2, 3, 4, 5].map((i) => (
 						<div key={i} className='relative h-64 overflow-hidden rounded-lg shadow-md'>
 							<Image
 								src={`/gameplay/screenshot_${i}.webp`}
