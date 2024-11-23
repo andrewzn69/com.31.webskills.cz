@@ -3,7 +3,7 @@ import ReservationSystem from './reservation-system';
 
 export default function Dashboard() {
 	// TODO: fetch username
-	const username = 'John Doe';
+	const username = 'Jan Novák';
 
 	return (
 		<div>
